@@ -53,9 +53,10 @@ args = parser.parse_args()
 def valid_mac(phone_mac):
     '''
     Key device MAC address validation.
-    Takes in MAC address with : or - delimination.
-    Validates MAC with regex and checks for empty input.
+    Takes in MAC address as a string with : or - delimination.
+    Validates MAC with regex.
     Exits on invalid MAC address.
+    Returns phone_mac string.
     '''
     #  MAC regex
     regex = ("^([0-9A-Fa-f]{2}[:-])" +
